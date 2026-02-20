@@ -1,0 +1,1337 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6e1c3;
+  color: #3b2f2f;
+}
+
+/* ===============================
+   SPLASH SCREEN
+================================ */
+.splash {
+  height: 100vh;
+  width: 100vw;
+  background: #e8c089;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-logo {
+  width: 220px;
+  max-width: 80%;
+}
+
+/* ===============================
+   GET STARTED – FULL SCREEN
+================================ */
+.get-started-full {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.get-started-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.get-started-full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.get-started-text {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  z-index: 2;
+}
+
+.get-started-text h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1.02;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+.get-started-btn-full {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  height: 56px;
+  padding: 0 44px;
+  border-radius: 28px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===============================
+   LOGIN PAGE
+/* ===============================
+   LOGIN PAGE – RESTORED & FIXED
+================================ */
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+
+  background-image: url("./assets/loginbg.png");
+  background-repeat: repeat;
+  background-size: 300px;
+}
+
+/* Centered login card */
+.login-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  padding: 28px 22px;
+  border-radius: 22px;
+
+  background: #f5f0ea;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.login-card h2 {
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.login-sub {
+  font-size: 12px;
+  margin-bottom: 18px;
+  color: #555;
+}
+
+/* ===============================
+   LOGIN CAPSULES – PERFECT ALIGN
+================================ */
+
+.login-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Force SAME box model */
+.login-fields input,
+.login-fields button {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 20px;
+  border-radius: 24px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Inputs */
+.login-fields input {
+  background: #e7dfd6;
+  color: #555;
+  outline: none;
+}
+
+/* Login button */
+.login-fields button {
+  background: #f29a9a;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   SOCIAL LOGIN
+================================ */
+
+.or-text {
+  margin: 14px 0 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social.fb { background: #1877f2; color: #fff; }
+.social.x { background: #000; color: #fff; }
+.social.google { background: #db4437; color: #fff; }
+.social.apple { background: #000; color: #fff; }
+
+/* Signup */
+.signup-text {
+  font-size: 12px;
+  color: #555;
+}
+
+.signup-text span {
+  color: #f29a9a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===============================
+   HOME PAGE
+================================ */
+.home-screen {
+  min-height: 100vh;
+  background: #e9bd78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-card {
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+/* Search bar */
+.home-search {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* ===============================
+   HOME HERO GRADIENT BOX (NEW)
+================================ */
+.home-hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 20px;
+  margin-bottom: 22px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    to bottom,
+    #d8a85c,
+    #c18b3f
+  );
+}
+
+.home-hero-text {
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #000;
+}
+
+.apply-btn {
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #d05a73;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   HOME CARDS
+================================ */
+.home-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  flex: 1;                  /* 🔑 forces equal width */
+}
+.image-card img {
+  width: 100%;
+  height: 240px;            /* 🔑 same height for both */
+  object-fit: cover;
+}
+
+.image-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 22px;
+  border-radius: 20px;
+  background: #c97d7d;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   DESKTOP LAYOUT
+================================ */
+@media (min-width: 768px) {
+  .home-cards {
+    flex-direction: row;
+  }
+
+  .image-card img {
+    height: 300px;
+  }
+
+  .home-hero-text {
+    font-size: 22px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 600px) {
+  .login-card {
+    width: 90%;
+  }
+}
+/* ===============================
+   HOME SCROLL SECTION (5TH SLIDE)
+================================ */
+
+.home-scroll-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* ===============================
+   HOVER ANIMATIONS (POP EFFECT)
+================================ */
+
+/* Card hover lift */
+.image-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Image subtle zoom */
+.image-card img {
+  transition: transform 0.4s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Button pop */
+.image-btn,
+.apply-btn,
+.get-started-btn-full {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* ===============================
+   BUTTON HOVER – VERTICAL LIFT ONLY
+================================ */
+
+.image-btn,
+.apply-btn,
+.get-started-btn-full {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center;   /* 🔑 prevents side shift */
+}
+
+.image-btn:hover,
+.apply-btn:hover,
+.get-started-btn-full:hover {
+  transform: translateY(-4px);   /* ⬆️ lift only */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Click press effect */
+.image-btn:active,
+.apply-btn:active,
+.get-started-btn-full:active {
+  transform: translateY(-1px);
+}
+
+/* Button press (click feel) */
+.image-btn:active,
+.apply-btn:active,
+.get-started-btn-full:active {
+  transform: scale(0.97);
+}
+/* ===============================
+   BUTTON LIFT EFFECT – NO SHIFT
+================================ */
+
+/* Get Started button */
+.get-started-btn-full {
+  transition: margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.get-started-btn-full:hover {
+  margin-bottom: 4px; /* lift up */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.get-started-btn-full:active {
+  margin-bottom: 1px;
+}
+
+/* Image buttons (Take Me Home, Rescue, etc.) */
+.image-btn {
+  transition: margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-btn:hover {
+  margin-bottom: 4px; /* lift up */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.image-btn:active {
+  margin-bottom: 1px;
+}
+
+/* Apply button (already correct, but keep consistent) */
+.apply-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apply-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.apply-btn:active {
+  transform: translateY(-1px);
+}
+/* ===============================
+   BUTTON LIFT – FIXED (NO SHIFT)
+================================ */
+
+/* Buttons that are CENTERED with translateX */
+.get-started-btn-full,
+.image-btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover = KEEP translateX + add translateY */
+.get-started-btn-full:hover,
+.image-btn:hover {
+  transform: translateX(-50%) translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Active (click) */
+.get-started-btn-full:active,
+.image-btn:active {
+  transform: translateX(-50%) translateY(-1px);
+}
+/* ===============================
+   HERO SECTION CARD (SLIDE 6)
+================================ */
+/* ===============================
+   HERO SECTION CARD (UPDATED)
+================================ */
+
+.hero-card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 22px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* Pill */
+.hero-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: #c97d7d;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.hero-title {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+/* Before / After wrapper */
+.hero-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+/* Image boxes – TALLER */
+.hero-img-box {
+  flex: 1;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero-img-box img {
+  width: 100%;
+  height: 200px;          /* 🔥 increased height */
+  object-fit: cover;
+}
+
+/* Arrow between images */
+.hero-arrow {
+  font-size: 30px;
+  font-weight: 700;
+  color: #c97d7d;
+  flex-shrink: 0;
+}
+
+/* Dog info */
+.hero-name {
+  font-size: 25px;
+  margin-top: 12px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: #777;
+}
+
+.hero-quote {
+  font-size: 15px;
+  margin: 12px 0 18px;
+  font-style: italic;
+}
+
+/* Mini cards */
+.hero-mini-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mini-card {
+  flex: 1;
+  background: #f5f0ea;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.mini-card img {
+  width: 100%;
+  height: 130px;          /* slightly taller */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mini-card p {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.mini-card span {
+  color: #777;
+}
+
+/* Desktop enhancement */
+@media (min-width: 768px) {
+  .hero-img-box img {
+    height: 260px;        /* 💻 desktop clarity */
+  }
+}
+/* ===============================
+   HERO SECTION – HOVER EFFECTS
+================================ */
+
+/* Before / After image boxes */
+.hero-img-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* Image zoom inside hero boxes */
+.hero-img-box img {
+  transition: transform 0.4s ease;
+}
+
+.hero-img-box:hover img {
+  transform: scale(1.06);
+}
+
+/* Mini cards hover */
+.mini-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+/* Mini card image zoom */
+.mini-card img {
+  transition: transform 0.4s ease;
+}
+
+.mini-card:hover img {
+  transform: scale(1.06);
+}
+/* ===============================
+   TAKE ME HOME PAGE
+================================ */
+
+.tmh-page {
+  min-height: 100vh;
+  background: #f5f1e9;
+  padding: 18px;
+  overflow-y: auto;
+}
+
+/* Header */
+.tmh-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #f5b94c;
+  padding: 10px 16px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.tmh-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.tmh-back {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tmh-paw {
+  font-size: 36px;          /* bigger paw */
+  line-height: 1;
+}
+
+
+/* Title */
+.tmh-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* List */
+.tmh-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Card */
+.tmh-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.tmh-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.tmh-name {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.tmh-details p {
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.tmh-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.tmh-tags span {
+  background: #e8c37a;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.tmh-btn {
+  width: 100%;
+  height: 42px;
+  border-radius: 21px;
+  border: none;
+  background: #f28b2d;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .tmh-list {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .tmh-img {
+    height: 220px;
+  }
+}
+/* ===============================
+   RESCUE PAGE
+================================ */
+
+
+.rescue-page {
+  min-height: 100vh;
+  background: #f2d3a2;
+  padding: 20px;
+}
+
+/* Header centered */
+.rescue-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.rescue-back {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.rescue-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+/* Centered title + subtitle */
+.rescue-main-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.rescue-sub {
+  font-size: 14px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+/* Cards */
+.rescue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rescue-card {
+  background: #c8a77a;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.rescue-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.rescue-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.rescue-desc {
+  background: #f0e6da;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.rescue-btn {
+  background: #b8915c;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .rescue-list {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .rescue-main-title {
+    font-size: 24px;
+  }
+}
+
+/* ===============================
+   PAGE LOAD ANIMATION
+================================ */
+
+.fade-in-page {
+  animation: pageFade 0.6s ease-out;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFade 0.6s ease forwards;
+}
+
+.fade-in-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fade-in-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.fade-in-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   HOW TO HELP PAGE (GRADIENT THEME)
+================================ */
+
+.help-page {
+  min-height: 100vh;
+  padding: 20px;
+
+  /* Warm gradient background */
+  background: linear-gradient(
+    180deg,
+    #f7d9b8 0%,
+    #f2caa7 100%
+  );
+}
+
+/* Back Button */
+.help-back {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+/* Main rounded container */
+.help-container {
+  background: linear-gradient(
+    180deg,
+    #f3e5d8 0%,
+    #efe0d2 100%
+  );
+
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Top pill */
+.help-pill {
+  background: linear-gradient(
+    90deg,
+    #e7c2aa,
+    #e2b39c
+  );
+
+  padding: 12px 22px;
+  border-radius: 24px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Subtitle */
+.help-sub {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #6d4c41;
+}
+
+/* Welcome paragraph */
+.help-welcome {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 26px;
+  color: #5a4038;
+}
+
+/* Cards */
+.help-card {
+  background: linear-gradient(
+    180deg,
+    #e3c6ce,
+    #d9b1bb
+  );
+
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 22px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.help-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.help-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.help-card ul {
+  font-size: 13px;
+  margin-bottom: 14px;
+  padding-left: 18px;
+}
+
+/* Buttons */
+.help-btn {
+  background: linear-gradient(
+    90deg,
+    #b56b79,
+    #a45a6a
+  );
+
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Safety Section */
+.help-safety {
+  background: linear-gradient(
+    180deg,
+    #e3c6ce,
+    #d9b1bb
+  );
+
+  padding: 22px;
+  border-radius: 18px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.help-safety h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.help-safety ul {
+  font-size: 14px;
+  padding-left: 18px;
+}
+
+/* Desktop Centering */
+@media (min-width: 768px) {
+  .help-container {
+    max-width: 650px;
+    margin: auto;
+  }
+}
+/* ===============================
+   COMMUNITY PAGE (Same Theme)
+================================ */
+
+.community-page {
+  min-height: 100vh;
+  padding: 20px;
+
+  background: linear-gradient(
+    180deg,
+    #f7d9b8 0%,
+    #f2caa7 100%
+  );
+}
+
+/* Back button */
+.community-back {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+/* Main container */
+.community-container {
+  background: linear-gradient(
+    180deg,
+    #f3e5d8 0%,
+    #efe0d2 100%
+  );
+
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Top pill */
+.community-pill {
+  background: linear-gradient(
+    90deg,
+    #e7c2aa,
+    #e2b39c
+  );
+
+  padding: 12px 22px;
+  border-radius: 24px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Subtitle */
+.community-sub {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #6d4c41;
+}
+
+/* Welcome */
+.community-welcome {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 26px;
+  color: #5a4038;
+}
+
+/* Cards */
+.community-card {
+  background: linear-gradient(
+    180deg,
+    #e3c6ce,
+    #d9b1bb
+  );
+
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 22px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.community-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.community-card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.community-desc {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* Button */
+.community-btn {
+  background: linear-gradient(
+    90deg,
+    #b56b79,
+    #a45a6a
+  );
+
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Desktop center */
+@media (min-width: 768px) {
+  .community-container {
+    max-width: 650px;
+    margin: auto;
+  }
+}
+/* ===============================
+   ABOUT US PAGE
+================================ */
+
+.about-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  background: linear-gradient(
+    180deg,
+    #f7d9b8 0%,
+    #f2caa7 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Back button */
+.about-back {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+/* Main centered container */
+.about-container {
+  width: 100%;
+  max-width: 700px;
+
+  background: linear-gradient(
+    180deg,
+    #e9e3b8 0%,
+    #d9d39f 100%
+  );
+
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Section spacing */
+.about-section {
+  margin-bottom: 30px;
+}
+
+/* Titles */
+.about-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Info cards */
+.about-card {
+  background: #f6f0d8;
+  padding: 18px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.about-card.vision {
+  background: #e8f3df;
+}
+
+/* Contact layout */
+.about-contact {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+/* Form side */
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1f5da6;
+  margin-bottom: 16px;
+}
+
+.contact-left label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+  display: block;
+}
+
+.contact-left input,
+.contact-left textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 10px;
+
+  background: #f5eec8;
+}
+
+/* Dog image side */
+.contact-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.contact-right img {
+  width: 100%;
+  max-width: 300px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+}
